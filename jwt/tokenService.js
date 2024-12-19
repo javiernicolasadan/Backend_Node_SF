@@ -2,7 +2,7 @@ const fs = require('fs');
 process.loadEnvFile() 
 
 const { getToken } = require('sf-jwt-token')
-const privateKey = fs.readFileSync('private.pem').toString('utf8')
+const privateKey = fs.readFileSync('certs/private.pem').toString('utf8')
 
 // Function to generate a JWT token
 async function generateToken () {
