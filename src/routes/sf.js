@@ -26,9 +26,9 @@ router.get('/', async (req, res) => {
   }  
   router.post("/commuting", async (req, res) => {
     
-    res.json({ message: "Datos recibidos correctamente", data: req.body });
+    //res.json({ message: "Datos recibidos correctamente", data: req.body });
     console.log("Datos recibidos (POST):", req.body);
-    const { name, company } = req.body;
+    const { name, company, startDate, endDate, distance } = req.body;
    
     try {
         const result = await conn.sobject("Ground_Travel_Energy_Use__c").create({
@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
               errors: result.errors,
             });
           }
-    } catch (error) {
+    } catch (err) {
         console.error("Error al insertar en Salesforce:", err);
     res.status(500).json({
       message: "Error interno al insertar en Salesforce",
