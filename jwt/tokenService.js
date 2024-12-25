@@ -1,5 +1,5 @@
-const fs = require("fs");
-process.loadEnvFile();
+//const fs = require("fs");
+//process.loadEnvFile();
 
 const { getToken } = require("sf-jwt-token");
 
