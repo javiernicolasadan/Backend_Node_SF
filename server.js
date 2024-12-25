@@ -9,8 +9,8 @@ const indexRoutes = require("./src/routes/index.js");
 const salesforceRoutes = require("./src/routes/sf.js");
 
 // Load environment variables from .env file
-process.loadEnvFile();
-const port = process.env.port || 3000;
+//process.loadEnvFile();
+const port = process.env.PORT || 3000;
 
 app.use("/", indexRoutes);
 app.use("/sf", salesforceRoutes);
