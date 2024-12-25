@@ -13,10 +13,10 @@ async function generateToken() {
       aud: process.env.LOGIN_URL,
       privateKey: privateKey,
     });
-    console.log("Token generado:", token);
-    console.log("Token generado:", token.access_token);
+    //console.log("Generated token:", token);
+    //console.log("Generated token:", token.access_token);
     return { instanceUrl: token.instance_url, accessToken: token.access_token };
-  } catch (error) {console.error("Error al generar el token:", error.message);
+  } catch (error) {console.error("Error generating token:", error.message);
     throw error; 
     }
 }

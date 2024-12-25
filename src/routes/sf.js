@@ -21,8 +21,8 @@ router.get("/", async (req, res) => {
   }
 });
 router.post("/commuting", async (req, res) => {
-  //res.json({ message: "Data received", data: req.body });
-  console.log("Datos recibidos (POST):", req.body);
+  
+  //console.log("Datos recibidos (POST):", req.body);
   const { name, company, startDate, endDate, distance } = req.body;
 
   try {
@@ -45,7 +45,7 @@ router.post("/commuting", async (req, res) => {
     //console.log("Register obteined. Success.:", result);
 
     if (result.success) {
-      console.log("Register obteined. Success.:", result.id);
+      console.log("Register obtained. Success.:", result.id);
       res.json({
         message: "Register inserted. Success.",
         id: result.id,
