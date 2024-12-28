@@ -91,7 +91,8 @@ If everything went well, now you will get your access_token.
   token_type: 'Bearer'
 }
 ```
-What I did in my solution its everything a call its done, I getting a new token from SF. May be the same one, o new one because SF its generating a new one from time to time.
+
+### What I did in my solution its everything a call its done, I getting a new token from SF. May be the same one, o new one because SF its generating a new one from time to time.
 
 ## **5. Using JSforce**
 With the token, you can start interacting with Salesforce from your Node.js server. Here’s a simple example:
